@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Создаем объект Scanner для чтения ввода пользователя
+        Scanner scanner = new Scanner(System.in);
+
+        // Запрашиваем у пользователя ввод двух целых чисел в одной строке
+        System.out.print("Введите два целых числа (a и b) через пробел: ");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        // Сравниваем числа и выводим результат
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+
+        // Выполняем арифметические операции и выводим результаты
+        int sum = a + b;
+        int difference = a - b;
+        int product = a * b;
+        // Используем тернарный оператор для обработки деления на ноль
+        String quotient = b != 0 ? String.valueOf((double) a / b) : "деление на ноль невозможно";
+
+        System.out.println("Сложение: " + a + " + " + b + " = " + sum);
+        System.out.println("Вычитание: " + a + " - " + b + " = " + difference);
+        System.out.println("Умножение: " + a + " * " + b + " = " + product);
+        System.out.println("Деление: " + a + " / " + b + " = " + quotient);
+
+        scanner.close();
+    }
+}
