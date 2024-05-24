@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // запрашиваем у пользователя ввод двух строк в одной строке через пробел
-        System.out.print("Введите две строки через пробел (a и b): ");
+        System.out.print("введите две строки через пробел (a и b): ");
         String input = scanner.nextLine();
         
         // разделяем введенную строку на две строки
@@ -16,9 +16,9 @@ public class Main {
 
         // сравниваем строки и выводим результат
         if (a.equals(b)) {
-            System.out.println("Строки идентичны");
+            System.out.println("строки идентичны");
         } else {
-            System.out.println("Строки неидентичны");
+            System.out.println("строки неидентичны");
         }
 
         scanner.close();
