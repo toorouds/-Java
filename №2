@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // создаем объект Scanner для чтения ввода пользователя
+        Scanner scanner = new Scanner(System.in);
+
+        // запрашиваем у пользователя ввод двух строк в одной строке через пробел
+        System.out.print("Введите две строки через пробел (a и b): ");
+        String input = scanner.nextLine();
+        
+        // разделяем введенную строку на две строки
+        String[] parts = input.split(" ");
+        String a = parts[0];
+        String b = parts[1];
+
+        // сравниваем строки и выводим результат
+        if (a.equals(b)) {
+            System.out.println("Строки идентичны");
+        } else {
+            System.out.println("Строки неидентичны");
+        }
+
+        scanner.close();
+    }
+}
