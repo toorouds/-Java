@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // создаем объект Scanner для ввода данных
+        Scanner scanner = new Scanner(System.in);
+        
+        // запрашиваем у пользователя ввод данных
+        System.out.print("Введите числа через пробел: ");
+        String input = scanner.nextLine();
+        
+        // разбиваем строку на отдельные числа
+        String[] numbersStr = input.split(" ");
+        
+        // создаем строку для хранения четных чисел
+        StringBuilder evenNumbers = new StringBuilder();
+        
+        // проходим по каждому числу из введенных данных
+        for (String numStr : numbersStr) {
+            // преобразуем строку в целое число
+            int number = Integer.parseInt(numStr);
+            
+            // проверяем, является ли число четным
+            if (number % 2 == 0) {
+                // добавляем четное число к строке
+                evenNumbers.append(number).append(" ");
+            }
+        }
+        
+        // выводим все четные числа в виде строки
+        System.out.println("Четные числа: " + evenNumbers.toString().trim());
+        
+        scanner.close();
